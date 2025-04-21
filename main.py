@@ -131,11 +131,72 @@
 #     case _:
 #         print("Invalid index.")
 
-score = int(input("Input Score : "))
-match score:
-    case 12 | 11:
-        print(f"Great Score : {score}")
-    case 10| 9 | 8 :
-        print(f"Passed : {score}")
-    case _:
-        print(f"Failed : {score}")
+# score = int(input("Input Score : "))
+# match score:
+#     case 12 | 11:
+#         print(f"Great Score : {score}")
+#     case 10| 9 | 8 :
+#         print(f"Passed : {score}")
+#     case _:
+#         print(f"Failed : {score}")
+
+# names = ["makara","both","rak","dara"] #list
+# #for loop (iterator)
+# for name in names:
+#     print(name)
+    
+#1-100 (10,20,30...,100)
+#for
+# for num in range(0,100):
+#     if num % 10 == 0:
+#         print(num)
+#while
+# num =0 
+# while num < 100 :
+#     num+=1
+#     if num % 10 != 0 :
+#         print(num)
+        
+numbers = [] #list
+print(type(numbers))
+
+values = () #tuple
+print(type(values))
+
+students = {} #dict
+print(type(students))
+
+names = set() #set
+print(type(names))
+
+
+#mutable and immutable
+
+print("============")
+
+#immutable
+age = 25
+print(id(age))
+age = age + 5 
+print(id(age))
+
+print("============")
+
+#mutable
+print(numbers)
+print(id(numbers))
+numbers.append(100)
+print(numbers)
+print(id(numbers))
+
+numbers.append(200)
+numbers.append(300)
+print(numbers)
+print(id(numbers))
+
+print("============")
+
+for num in numbers : 
+    print(num)
+    
+print(numbers[0:2])
