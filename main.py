@@ -1,0 +1,116 @@
+# result = True and False
+# print(result) #false
+
+# result = True or False
+# print(result) #true 
+
+# result = not True
+# print(result) #false     
+
+# result = (5==5)
+# print(result) #true 
+
+# result = (5!=5)
+# print(result) #false
+
+
+# name = input("Enter Your Name : ")
+# print("Welcome "+name+" to Python programming!")
+
+# print(type(name))
+
+
+# firstName = input("Enter Your First Name : ")
+# secondName = input("Enter Your Second Name:")
+# print("Welcome " + firstName + secondName + " to Python Programming!")
+
+# myMentality = "John Wick " *3    
+# print(myMentality)
+
+
+# name = "Taing Sengkim"
+# age = "18"
+
+# print("\nHello, my name is {}. I'm {} years old!".format(name,age))
+
+# greeting = f"\nHello , my name is {name}. I'am {age} years old!"
+# print(greeting)
+
+# age = input("Enter your age : ")
+
+# if(int(age) >= 18):
+#     print("You are allowed to watch this this movie")
+# else:
+#     print("Your are not allowrd to watch this movie!")
+
+# import random
+# num = random.randint(1,10)
+# guesingNumber= input("Enter your guessing number : ")
+
+# while guesingNumber.isdigit() and int(num) !=  int(guesingNumber):
+#     guesingNumber = input("Wrong! Try again: ")
+    
+# if guesingNumber.isdigit():
+#  print("Congrats! The number is " + guesingNumber) 
+# else :
+#  print("Please Enter Valid Number!") 
+
+# print("Hello this is my first python class!")
+# i=0
+# while i <= 50 :
+#     i+=1
+#     print(i)
+
+# for i in range(40,50):
+#     print(i)
+
+
+# first_name = "Taing"
+# last_name = "Sengkim"
+# print(f"{first_name} {last_name}")
+
+# value_a = "50"
+# value_b = "100"
+# print(value_a + value_b)
+
+# num1= 50
+# num2= 100
+# print(num2 + num1)
+
+# message = "HELLO"
+# print("\n"+message[0:2])
+# print(message)
+# print(message[2])
+# print(message[:3])
+# print(message[-5])
+
+# a = 99
+# b = 10
+# print(a/b) 
+# print(type(a/b)) #Flaot Division (/)
+
+# print(a//b) 
+# print(type(a//b)) #Integer Division (//)
+
+# age = 25
+# if age < 25:
+#     print("age greater than 25")
+# elif age == 25:
+#     print("age equal 25")
+# else:
+#     print("age lower than 25")
+
+# id = input("Enter Id : ")
+# name = input("Enter name : ")
+# age = input("Enter Age : ")
+# print(f"ID : {id}\nName : {name}\nAge : {age}")
+
+#input value A , input value B
+#print (+,-,*,/,//)
+numA = float(input("Enter A : "))
+numB = float(input("Enter B : "))
+print(f"{numA} + {numB} = {numA + numB}")
+print(f"{numA} - {numB} = {numA - numB}")
+print(f"{numA} * {numB} = {numA * numB}")
+print(f"{numA} / {numB} = {numA / numB}")
+print(f"{numA} // {numB} = {numA // numB}")
