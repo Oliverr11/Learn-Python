@@ -107,10 +107,35 @@
 
 #input value A , input value B
 #print (+,-,*,/,//)
-numA = float(input("Enter A : "))
-numB = float(input("Enter B : "))
-print(f"{numA} + {numB} = {numA + numB}")
-print(f"{numA} - {numB} = {numA - numB}")
-print(f"{numA} * {numB} = {numA * numB}")
-print(f"{numA} / {numB} = {numA / numB}")
-print(f"{numA} // {numB} = {numA // numB}")
+# numA = float(input("Enter A : "))
+# numB = float(input("Enter B : "))
+# print(f"{numA} + {numB} = {numA + numB}")
+# print(f"{numA} - {numB} = {numA - numB}")
+# print(f"{numA} * {numB} = {numA * numB}")
+# print(f"{numA} / {numB} = {numA / numB}")
+# print(f"{numA} // {numB} = {numA // numB}")
+
+
+# colors = input("Input color index (1-5) : ")
+# match colors:
+#     case "1" :
+#         print("You're Choosing Blue")
+#     case "2" :
+#         print("You're Choosing Red")
+#     case "3" :
+#         print("You're Choosing Green")
+#     case "4" :
+#         print("You're Choosing Yellow")
+#     case "5" :
+#         print("You're Choosing Black")
+#     case _:
+#         print("Invalid index.")
+
+score = int(input("Input Score : "))
+match score:
+    case 12 | 11:
+        print(f"Great Score : {score}")
+    case 10| 9 | 8 :
+        print(f"Passed : {score}")
+    case _:
+        print(f"Failed : {score}")
