@@ -19,10 +19,15 @@ def addBook():
     category = input("Enter Category Name : ")
     searchCate = searchCategory(category)
     if searchCate != None : 
-        bookName = input("Enter Book Name : ")
         bookId = input("Enter Book Id : ")
+        for book in searchCate :
+            if book['bookId'] == bookId:
+                print("This Book  Id Already Exist!")
+                return
+        bookName = input("Enter Book Name : ")
+       
         isBorrowed = False
-        libraries[category].append({
+        searchCate.append({
             "bookId": bookId,
             "bookName": bookName,
             "isBorrowed": isBorrowed
@@ -87,52 +92,7 @@ def displayBook():
             displayBooksByCategory(category)
         case _:
             print("Invalid Option!")
-            
-def borrowBook():
-    print("==>> Borrow Book")
-    displayCategory()
-    categoryName = input("Enter Category : ")
-    searchCate = searchCategory(categoryName)
-    if searchCate != None:
-        displayBooksByCategory(categoryName)
-        bookName = input("Enter Book Name : ")
-        sBook = searchBook(categoryName,bookName)
-        if sBook != None : 
-            if sBook['isBorrowed'] == False: 
-                sBook['isBorrowed'] = True
-                print("Borrow Successfully!")
-                return
-            else:
-                print(f"{sBook['bookName']} Is Unavailible!")
-                return
-        else:
-            print("Book Not Found!")
-            return
-    print("Category Not Found!")
-    
-def returnBook():
-    print("==>> Return Book")
-    displayCategory()
-    categoryName = input("Enter Category : ")
-    searchCate = searchCategory(categoryName)
-    if searchCate != None:
-        displayBooksByCategory(categoryName)
-        bookName = input("Enter Book Name : ")
-        sBook = searchBook(categoryName,bookName)
-        if sBook != None : 
-            if sBook['isBorrowed'] == True: 
-                sBook['isBorrowed'] = False
-                print("Return Successfully!")
-                return
-            else:
-                print(f"{sBook['bookName']} Is Availible!")
-                return
-        else:
-            print("Book Not Found!")
-            return
-            
-    print("Category Not Found!")
-    
+
 def returnOrBorrowBook(checkRB):
     print("==>> Return Book")
     displayCategory()
@@ -194,7 +154,12 @@ def menu():
         print("6) Search Book")
         #print("10) Print List [Test]")
         print("7) Exit")
-        option = int(input("Enter Option (1-7) : "))
+        try:
+            option = int(input("Enter Option (1-7) : "))
+        except ValueError:
+            os.system('cls')
+            print("Invalid input! Please enter a number.")
+            continue 
         match option:
             case 1:    
                 os.system('cls')
@@ -207,12 +172,10 @@ def menu():
             case 3:
                 os.system('cls')
                 #os.system('clear') #mac
-                #borrowBook()
                 returnOrBorrowBook("borrow")
             case 4:
                 os.system('cls')
                 #os.system('clear') #mac
-                #returnBook()
                 returnOrBorrowBook("return")
             case 5:
                 os.system('cls')
