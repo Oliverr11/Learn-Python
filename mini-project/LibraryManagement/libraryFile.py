@@ -65,7 +65,6 @@ def searchCategory(categoryName):
     for key,value in libraries.items():
         if key.lower() == categoryName.lower():
             return value       
-    print("Category Not Found!") 
     return None
 def searchBook(categoryName,bookName):
     searchCate = searchCategory(categoryName)
